@@ -5,6 +5,7 @@
 
 		public $validate = array(
 	        'nome' =>  array(
+	        	'rule' => 'notEmpty',
 	            'message' => 'Informe o nome do campeonato.',
 	            'allowEmpty' => false
 	        ),

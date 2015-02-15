@@ -6,10 +6,12 @@
 
 		public $validate = array(
 	        'categoria_id' =>  array(
+	        	'rule' => 'notEmpty',
 	            'message' => 'Selecione uma categoria para este post.',
 	            'allowEmpty' => false
 	        ),
 	        'legenda' =>  array(
+	        	'rule' => 'notEmpty',
 	            'message' => 'Digite uma legenda para este post.',
 	            'allowEmpty' => false
 	        ),

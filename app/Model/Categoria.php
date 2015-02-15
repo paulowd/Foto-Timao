@@ -5,10 +5,12 @@
 
 		public $validate = array(
 	        'name' =>  array(
+	        	'nome' => 'notEmpty',
 	            'message' => 'Informe o nome da categoria.',
 	            'allowEmpty' => false
 	        ),
-	        'name' =>  array(
+	        'descricao' =>  array(
+	        	'rule' => 'notEmpty',
 	            'message' => 'Preencha uma descrição para a categoria.',
 	            'allowEmpty' => false
 	        ),

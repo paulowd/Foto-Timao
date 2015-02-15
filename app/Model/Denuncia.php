@@ -4,7 +4,8 @@
 
 		public $validate = array(
 	        'motivo' =>  array(
-	            'message' => 'Por favor, entre com detalhes sobre sua denúncia.',
+	        	'rule' => array('minLength', 10),
+	            'message' => 'Por favor, entre com mais detalhes sobre sua denúncia.',
 	            'allowEmpty' => false
 	        )
 	    );

@@ -5,6 +5,7 @@
 
 		public $validate = array(
 	        'player_id' =>  array(
+	        	'rule' => 'notEmpty',
 	            'message' => 'Selecione o player onde está hospedado o vídeo.',
 	            'allowEmpty' => false
 	        ),
@@ -19,6 +20,7 @@
 	           	)
 	        ),
 	        'titulo' =>  array(
+	        	'rule' => 'notEmpty',
 	            'message' => 'Informe o título do vídeo.',
 	            'allowEmpty' => false
 	        )

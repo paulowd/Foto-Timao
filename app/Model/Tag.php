@@ -5,10 +5,12 @@
 
 		public $validate = array(
 	        'nome' =>  array(
+	        	'rule' => 'notEmpty',
 	            'message' => 'Informe o nome da tag.',
 	            'allowEmpty' => false
 	        ),
 	        'slug' =>  array(
+	        	'rule' => 'unique',
 	            'message' => 'Esta tag já existe',
 	            'allowEmpty' => false
 	        )
