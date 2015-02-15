@@ -13,7 +13,7 @@
 	            'allowEmpty' => false
 	        ),
 	        'slug' =>  array(
-	        	'rule' => unique
+	        	'rule' => 'unique',
 	            'message' => 'Já existe uma categoria com este nome.',
 	            'allowEmpty' => false
 	        )

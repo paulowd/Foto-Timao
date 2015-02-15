@@ -1,5 +1,5 @@
 <?php 
-	class Cidade extends AppModel {
+	class Status extends AppModel {
 		public $hasMany = array('Bairro', 'Relato');
 		public $belongsTo = array('Estado');
 

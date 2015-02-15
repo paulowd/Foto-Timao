@@ -14,7 +14,7 @@
 	            	'allowEmpty' => false
 	           	),
 	           'unique' => array(
-	           		'rule' => 'unique'
+	           		'rule' => 'unique',
 	           		'message' => 'Este vídeo já está cadastrado no site.'
 	           	)
 	        ),

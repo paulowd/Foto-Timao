@@ -9,7 +9,7 @@
 	            'allowEmpty' => false
 	        ),
 	        'slug' =>  array(
-	        	'rule' => unique
+	        	'rule' => 'unique',
 	            'message' => 'Já existe um campenato cadastrado com este nome.',
 	            'allowEmpty' => false
 	        )
