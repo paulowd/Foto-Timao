@@ -59,6 +59,74 @@ Cache::config('default', array('engine' => 'File'));
  * Inflector::rules('plural', array('rules' => array(), 'irregular' => array(), 'uninflected' => array()));
  *
  */
+// Alteração do inflector
+$_uninflected = array('atlas', 'lapis', 'onibus', 'pires', 'virus', '.*x', 'status');
+$_pluralIrregular = array(
+	'abdomens' => 'abdomen',
+	'alemao' => 'alemaes',
+	'artesa' => 'artesaos',
+	'as' => 'ases',
+	'bencao' => 'bencaos',
+	'cao' => 'caes',
+	'campus' => 'campi',
+	'capelao' => 'capelaes',
+	'capitao' => 'capitaes',
+	'chao' => 'chaos',
+	'charlatao' => 'charlataes',
+	'cidadao' => 'cidadaos',
+	'consul' => 'consules',
+	'cristao' => 'cristaos',
+	'dificil' => 'dificeis',
+	'email' => 'emails',
+	'escrivao' => 'escrivaes',
+	'fossel' => 'fosseis',
+	'germens' => 'germen',
+	'grao' => 'graos',
+	'hifens' => 'hifen',
+	'irmao' => 'irmaos',
+	'liquens' => 'liquen',
+	'mal' => 'males',
+	'mao' => 'maos',
+	'orfao' => 'orfaos',
+	'pais' => 'paises',
+	'pai' => 'pais',
+	'pao' => 'paes',
+	'perfil' => 'perfis',
+	'projetil' => 'projeteis',
+	'reptil' => 'repteis',
+	'sacristao' => 'sacristaes',
+	'sotao' => 'sotaos',
+	'tabeliao' => 'tabeliaes',
+	'user' => 'users',
+	'newsletter' => 'newsletters'
+);
+
+Inflector::rules('singular', array(
+	'rules' => array(
+		'/^(.*)(oes|aes|aos)$/i' => '\1ao',
+		'/^(.*)(a|e|o|u)is$/i' => '\1\2l',
+		'/^(.*)e?is$/i' => '\1il',
+		'/^(.*)(r|s|z)es$/i' => '\1\2',
+		'/^(.*)ns$/i' => '\1m',
+		'/^(.*)s$/i' => '\1',
+	),
+	'uninflected' => $_uninflected,
+	'irregular' => array_flip($_pluralIrregular)
+), true);
+
+Inflector::rules('plural', array(
+	'rules' => array(
+		'/^(.*)ao$/i' => '\1oes',
+		'/^(.*)(r|s|z)$/i' => '\1\2es',
+		'/^(.*)(a|e|o|u)l$/i' => '\1\2is',
+		'/^(.*)il$/i' => '\1is',
+		'/^(.*)(m|n)$/i' => '\1ns',
+		'/^(.*)$/i' => '\1s'
+	),
+	'uninflected' => $_uninflected,
+	'irregular' => $_pluralIrregular
+), true);
+
 
 /**
  * Plugins need to be loaded manually, you can either load them one by one or all of them in a single call
