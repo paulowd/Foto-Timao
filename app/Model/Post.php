@@ -30,7 +30,7 @@
 	            foreach ($data['Image'] as $i => $image) {
 	                if (is_array($data['Image'][$i])) {
 	                    // Force setting the `model` field to this model
-	                    $image['model'] = 'Produto';
+	                    $image['model'] = 'Post';
 
 	                    // Unset the foreign_key if the user tries to specify it
 	                    if (isset($image['foreign_key'])) {

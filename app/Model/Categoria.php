@@ -4,8 +4,8 @@
 		public $hasMany = array('Post');
 
 		public $validate = array(
-	        'name' =>  array(
-	        	'nome' => 'notEmpty',
+	        'nome' =>  array(
+	        	'rule' => 'notEmpty',
 	            'message' => 'Informe o nome da categoria.',
 	            'allowEmpty' => false
 	        ),
@@ -13,12 +13,12 @@
 	        	'rule' => 'notEmpty',
 	            'message' => 'Preencha uma descrição para a categoria.',
 	            'allowEmpty' => false
-	        ),
+	        )/*,
 	        'slug' =>  array(
 	        	'rule' => 'unique',
 	            'message' => 'Já existe uma categoria com este nome.',
-	            'allowEmpty' => false
-	        )
+	            'allowEmpty' => true
+	        )*/
 	    );
 
 		public function beforeValidate($options = array()) {

@@ -14,8 +14,8 @@ class Attachment extends AppModel {
     );
 
     public $belongsTo = array(
-        'Proposta' => array(
-            'className' => 'Proposta',
+        'Post' => array(
+            'className' => 'Post',
             'foreignKey' => 'foreign_key',
         )
     );

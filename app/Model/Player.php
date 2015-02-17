@@ -1,8 +1,7 @@
 <?php 
 	class Player extends AppModel {
     	public $displayField = 'nome';
-		public $hasMany = array('Bairro', 'Relato');
-		public $belongsTo = array('Estado');
+		public $hasMany = array('Video');
 
 		public $validate = array(
 	        'nome' =>  array(

@@ -1,5 +1,6 @@
 <?php 
 	class Status extends AppModel {
+    	public $displayField = 'nome';
 		public $hasMany = array('User', 'Post', 'Denuncia');
 
 		public $validate = array(
