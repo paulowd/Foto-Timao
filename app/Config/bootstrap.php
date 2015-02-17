@@ -98,6 +98,7 @@ $_pluralIrregular = array(
 	'sotao' => 'sotaos',
 	'tabeliao' => 'tabeliaes',
 	'user' => 'users',
+	'player' => 'players',
 	'newsletter' => 'newsletters'
 );
 
