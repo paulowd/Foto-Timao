@@ -17,9 +17,11 @@ class UsersController extends AppController {
 
 	public function beforeFilter() {
     	parent::beforeFilter();
+        // $this->Auth->allow('admin1910_add', 'admin1910_index', 'logout');
+        $this->Auth->allow('logout');
 
     	if($this->request->params['action'] == 'admin1910_login'){
-    		$this->layout = 'admin1910_login';
+    		$this->layout = 'admin_login';
     	}
     }
 }

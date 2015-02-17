@@ -2,6 +2,8 @@
 // app/Model/User.php
 class User extends AppModel {
     public $name = 'User';
+    public $belongsTo = array('Status');
+    
     public $validate = array(
         'username' => array(
             'required' => array(
